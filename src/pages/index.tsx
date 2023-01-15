@@ -1,5 +1,8 @@
+/**
+ * 仅支持anki 导出的csv文件
+ * 将会通过csv文件转为快考题导入文件
+ */
 import React from 'react';
-import { Button, Upload } from 'antd';
 import * as XLSX from 'xlsx';
 
 async function handleFileAsync(e: React.ChangeEvent<HTMLInputElement>) {
@@ -59,10 +62,7 @@ async function handleFileAsync(e: React.ChangeEvent<HTMLInputElement>) {
 
 const App: React.FC = () => {
   return (
-    <div>
-      <div id="my-table-id"></div>
-      <input type="file" accept='.csv' onChange={handleFileAsync} />
-    </div>
+    <input type="file" accept='.csv' onChange={handleFileAsync} />
   )
 };
 
